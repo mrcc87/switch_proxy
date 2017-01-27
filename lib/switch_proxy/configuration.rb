@@ -30,6 +30,3 @@ module SwitchProxy
     end
   end
 end
-
-SwitchProxy.configure do |config|
-end

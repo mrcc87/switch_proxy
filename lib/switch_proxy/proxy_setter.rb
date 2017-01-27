@@ -4,11 +4,12 @@ module SwitchProxy
     attr_accessor :bashrc, :apt_conf, :new_bashrc, :http_proxy, :https_proxy, :proxy_regex
 
     def initialize
+      SwitchProxy.configure { |config| }
       @bashrc = "#{ENV['HOME']}/.bashrc"
-      @new_bashrc = "new_#{@bashrc}"
+      @new_bashrc = "#{ENV['HOME']}/.new_bashrc"
       @apt_conf = "/etc/apt/apt.conf"
-      @http_proxy = ::SwitchProxy.configuration.http_proxy
-      @https_proxy = ::SwitchProxy.configuration.https_proxy
+      @http_proxy = SwitchProxy.configuration.http_proxy
+      @https_proxy = SwitchProxy.configuration.https_proxy
       @proxy_regex = Regexp.new /(http|https)_proxy/
     end
 
