@@ -6,10 +6,10 @@ module SwitchProxy
     def turn
       if options[:on]
         ProxySetter.new.add_proxy
-        puts "proxy on"
+        puts "proxy on".black.on_white
       else
         ProxySetter.new.remove_proxy
-        puts "proxy off"
+        puts "proxy off".red.on_white
       end
     end
   end
