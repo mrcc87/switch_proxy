@@ -37,5 +37,6 @@ describe SwitchProxy do
   it 'generates attr_accessors for SwitchProxy::Configuration from the properties in the .switch_proxy file' do
     expect(SwitchProxy.configuration).to respond_to(:http_proxy)
     expect(SwitchProxy.configuration).to respond_to(:https_proxy) 
+    expect(SwitchProxy.configuration).to respond_to(:editor) 
   end
 end
