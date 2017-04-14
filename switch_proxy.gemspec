@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Mircea Samuila"]
   spec.email         = ["mrcc87@gmail.com"]
 
-  spec.summary       = %q{Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
+  spec.summary       = %q{It set's up the http and https proxy in the ubuntu console.}
+  spec.description   = %q{It set's up the http and https proxy in the ubuntu console. It inserts two lines in the .bashrc file definign and exporting the http_proxy and https_proxy with the values in the .switch_proxy file. It also adds the proxy to the /etc/apt/apt.conf file to allow updates from the console.}
   spec.homepage      = "https://github.com/mrcc87/switch_proxy"
   spec.license       = "MIT"
   spec.platform      = Gem::Platform::RUBY
@@ -34,4 +34,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  #spec.add_development_dependency "climate_control", "~> 0.1.0"
 end

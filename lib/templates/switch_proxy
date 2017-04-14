@@ -1,2 +1,2 @@
-http_proxy: http://172.26.0.133:3128
-https_proxy: http://172.26.0.133:3128
+http_proxy: http://127.0.0.1:80
+https_proxy: http://127.0.0.1:80
