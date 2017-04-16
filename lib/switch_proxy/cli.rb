@@ -2,8 +2,8 @@ module SwitchProxy
   class Cli < Thor
 
     option :on, :type => :boolean
-    desc "toggle", "toggle console proxy on/off, default (no option) is off"
-    def toggle
+    desc "turn", "toggle console proxy on/off, default (no option) is off"
+    def turn
       if options[:on]
         ProxySetter.new.add_proxy
         puts set_color "proxy on", :black, :on_white
